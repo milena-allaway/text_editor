@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
-// const { GenerateSW } = require('workbox-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 const WorkboxPlugin = require('workbox-webpack-plugin');
@@ -33,15 +33,14 @@ module.exports = () => {
       // new GenerateSW(),
 
       new WebpackPwaManifest({
-        fingerprints: false,
-        inject: true,
+        fingerprints: false, // remove hashing of image files, so that it can be used in the html template as is
         name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Takes notes with Javascript syntax highlighting',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: '/',
-        publicPath: '/',
+        publicPath: './',
         orientation: 'portrait',
         display: 'standalone',
         icons: [
