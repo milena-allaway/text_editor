@@ -17,7 +17,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 //add event handler for click event on install button,
 //call prompt() on the event to trigger the install prompt
 
-butInstall.addEventListener('click', async () => {
+butInstall.addEventListener('click', () => {
     // if (deferredPrompt) {
     //     deferredPrompt.prompt();
     //     deferredPrompt.userChoice.then((choiceResult) => {
