@@ -45,6 +45,7 @@ registerRoute(
   ({ request }) =>
     request.destination === 'script' || // cache javascript files
     request.destination === 'style' || // cache css files
+    request.destination === 'worker', // cache web worker files
   new StaleWhileRevalidate({
     cacheName: 'asset-cache',
     plugins: [
