@@ -2,11 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
-// const { GenerateSW } = require('workbox-webpack-plugin');
-
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-const WorkboxPlugin = require('workbox-webpack-plugin');
-// TODO: Add CSS loaders and babel to webpack.
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
@@ -30,7 +25,6 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
-      // new GenerateSW(),
 
       new WebpackPwaManifest({
         fingerprints: false, // remove hashing of image files, so that it can be used in the html template as is

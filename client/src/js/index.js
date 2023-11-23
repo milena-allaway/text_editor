@@ -31,11 +31,4 @@ if ('serviceWorker' in navigator) {
   console.log('ServiceWorker registration successful');
 } else {
   console.error('Service workers are not supported in this browser.');
-}
-
-// this.addEventListener('fetch', function (event) {
-//   // This fetch function is required for the SW to be detected and is intentionally empty
-//   // For a more robust, real-world SW example see: https://developers.google.com/web/fundamentals/primers/service-workers
-// });
-
-
+};

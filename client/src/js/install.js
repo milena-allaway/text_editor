@@ -1,3 +1,4 @@
+// get the install button element
 const butInstall = document.getElementById('buttonInstall');
 // Initialize deferredPrompt for use later to show browser install prompt.
 let deferredPrompt;
@@ -7,43 +8,33 @@ let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
     deferredPrompt = event;
+    // make the install button visible
     butInstall.classList.remove('hidden');
+    // Update the install button's text so that user knows they can install the PWA
     butInstall.textContent = 'Install Me';
-    // butInstall.classList.toggle('hidden', false);
 });
 
 // Implement a click event handler on the `butInstall` element
-
 butInstall.addEventListener('click', async () => {
     // Show the install prompt
     deferredPrompt.prompt();
-    // Wait for the user to respond to the prompt
+    // Wait for the user to respond to the prompt and log result
     const outcome = await deferredPrompt.userChoice;
-    console.log('User response to the install prompt:', outcome);
-    // prompt has been used, set to null
+    console.log(`User response to the install prompt: ${outcome}`);
+    // prompt has been used, set to null since it can't be used again
     deferredPrompt = null;
-
+    // Hide the install button when the PWA has been installed.
     butInstall.classList.add('hidden');
-    // const promptEvent = window.deferredPrompt;
-    // if (promptEvent) {
-    //     promptEvent.prompt();
-    //     window.deferredPrompt = null;
-    //     butInstall.classList.toggle('hidden', true);
-    // }
-});
 
+});
 
 // handler for the `appinstalled` event
-// window.addEventListener('appinstalled', (event) => {
-//     console.log('JATE was installed.', event);
 window.addEventListener('appinstalled', () => {
-    // Clear the deferredPrompt so it can be garbage collected
-    // deferredPrompt = null;
     console.log('JATE was installed.');
-    // change button text to indicate app was installed
+    // clear the deferredPrompt, as it is no longer needed
     deferredPrompt = null;
 });
 
-
+//references:
 // https://stackoverflow.com/questions/72343203/how-to-add-custom-install-button-for-pwa
 //https://web.dev/articles/customize-install
