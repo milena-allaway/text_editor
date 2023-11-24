@@ -19,9 +19,19 @@ To install this app as a PWA, click on the install button in the header of the a
 
 ## Usage
 To use this app, simply type in the text area. The app will automatically save your work to the database. You can add or delete text, and the app will save your changes. You can also use the app offline. It can be installed on your phone or computer or used in the browser. You can visit the deployed app at: (insert link here)  
+  
+![Screenshot of app](./public/screenshots/Screenshot1.png)
 
 ## Credits
-The class activities and lessons were very helpful in building this app. My instructor Edward Apostole was very helpful in helping me get a better understanding of some concepts. I also used the following resources:
+The class activities and lessons were a good guide in building this app. My instructor Edward Apostole was very helpful in helping me get a better understanding of some concepts. I also used the following resources:
+*https://stackoverflow.com/questions/72343203/how-to-add-custom-install-button-for-pwa
+*https://web.dev/articles/customize-install
+*https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide
+*https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/
+*https://web.dev/articles/runtime-caching-with-workbox
+*https://www.npmjs.com/package/webpack-pwa-manifest
+*https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API#examples
+*https://www.npmjs.com/package/idb
 
 ## License
   This project is licensed under the MIT License. 
