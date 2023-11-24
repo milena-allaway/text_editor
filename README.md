@@ -2,7 +2,7 @@
 
 ## Description
 This is a text editor app that will run in the browser, save data to a IndexedDB database, cache data for offline use, and can be installed as a PWA (Progressive Web App) on your phone or computer.  
-I had some difficulty with the app caching, and having to refresh the page to get the proper content. I also had an issue displaying the icon, and learned about 'finerprints' in the manifest.json. I had to stop the hashing of the image file name when bundling, so the browser would be able to find the image file. This was not necessary for any of our class activitiies so I am still not sure why it was necessary here, but it works and I learned something in the process.  
+I had some difficulty with the app caching, and having to refresh the page to get the proper content. I also had an issue displaying the icon, and learned about 'finerprints' in the manifest.json. I had to stop the hashing of the image file name when bundling, so the browser would be able to find the image file. This was not necessary for any of our class activities so I am still not sure why it was necessary here, but it works and I learned something in the process.  The app is deployed, but I do find sometimes I had to clear the cache and refresh the page in order to clear the console of errors and display the install button.
 This is my first attempt at building a PWA, and I am happy with the results. I learned a lot about IndexedDB and caching, and I am excited to learn more about PWAs.
 
 ## Table of Contents
@@ -16,7 +16,7 @@ This is my first attempt at building a PWA, and I am happy with the results. I l
 - [Questions](#Questions)  
 
 ## Installation
-To install this app as a PWA, click on the install button in the header of the app and follow the prompts.  
+To install this app as a PWA, click on the install button in the header of the app and follow the prompts. You must be connected to the internet to install.
 To install the [repo](https://github.com/milena-allaway/text_editor), clone it, then run `npm install` to install the dependencies, then run `npm start` to build the app and start the server.
 
 ## Usage
